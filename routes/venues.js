@@ -17,14 +17,30 @@ router.get('/new', (req, res) => {
 })
 
 //SHOW, SHOW ONE
-
+router.get('/:id', (req, res) => {
+  Venues.findById(req.params.id)
+    .then((Venues) => {
+      res.render('venues/show', { Venues })
+    })
+})
 
 
 //EDIT, RENDER EDIT FORM
+router.get('/:id/edit', (req, res) => {
+  Venues.findById(req.params.id)
+    .then((Venues) => {
+      res.render('venues/edit', { Venues })
+    })
+})
 
 
 //CREATE
-
+router.post('/', (req, res) => {
+  Venues.create(req.body)
+    .then((Venues) => {
+      res.redirect(`venues/${venues._id}`)
+    })
+})
 
 //UPDATE
 
