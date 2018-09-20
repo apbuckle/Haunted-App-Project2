@@ -12,9 +12,12 @@ router.get('/', (req, res) => {
 })
 
 //NEW, RENDER NEW FORM
-
+router.get('/new', (req, res) => {
+  res.render('venues/new')
+})
 
 //SHOW, SHOW ONE
+
 
 
 //EDIT, RENDER EDIT FORM
