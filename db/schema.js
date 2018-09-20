@@ -26,10 +26,10 @@ const VenueSchema = new Schema ({
 
 const CastModel = mongoose.model('Cast', CastSchema)
 const AttractionModel = mongoose.model('Attraction', AttractionSchema)
-const VenueModel = mongoose.model('Venue', VenueSchema)
+const VenueModel = mongoose.model('Venues', VenueSchema)
 
 module.exports = {
     Cast: CastModel,
     Attraction: AttractionModel,
-    Venue: VenueModel
+    Venues: VenueModel
 }
