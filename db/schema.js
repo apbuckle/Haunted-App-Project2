@@ -20,7 +20,7 @@ const AttractionSchema = new Schema ({
 const VenueSchema = new Schema ({
     name: String,
     city: String,
-    scareFactor: Number,
+    age: Number,
     attractions: [AttractionSchema],
 })
 

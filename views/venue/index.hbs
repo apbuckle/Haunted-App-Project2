@@ -1,0 +1,11 @@
+<h1>All Venues <a href='/venue/new'>New</a></h1> 
+
+<div>
+    {{#each Venue}}
+        <div>name: {{this.name}} <a href='/users/{{this._id}}'>Go to user</a> </div>
+        <div>city: {{this.city}} </div>
+        <div>age range: {{this.age_range}}</div>
+
+    {{/each}}
+
+</div>
