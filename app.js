@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override')
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI,{ useNewUrlParser: true })
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
