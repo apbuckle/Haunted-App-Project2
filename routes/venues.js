@@ -38,15 +38,26 @@ router.get('/:id/edit', (req, res) => {
 router.post('/', (req, res) => {
   Venues.create(req.body)
     .then((Venues) => {
-      res.redirect(`venues/${venues._id}`)
+      res.redirect(`venues/${Venues._id}`)
     })
 })
 
 //UPDATE
+router.put('/id', (req, res) => {
+  Venues.findByIdAndUpdate(req.params.id, req.body)
+    .then((Venues) => {
+      res.redirect(`venues/${Venues._id}`)
+    })
+})
 
 
 //DELETE
-  
+  router.delete('/:id', (req,res) => {
+    Venues.findByIdAndRemove(req.params.id)
+      .then(() => {
+        res.redirect('venues')
+      })
+  })
 
 
 module.exports = router;
