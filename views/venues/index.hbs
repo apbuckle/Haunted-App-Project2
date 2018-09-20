@@ -5,10 +5,6 @@
         <div>name: {{this.name}} <a href='/venues/{{this._id}}'>Go to Venue</a>  </div>
         <div>city: {{this.city}} </div>
         <div>age: {{this.age}}</div>
-        <form action='/venues/{{this._id}}?_method=DELETE' method='POST'>
-    <input type="submit" value="Delete Venue">
-</form>
-
         <br>
     {{/each}}
 
