@@ -19,8 +19,8 @@ router.get('/new', (req, res) => {
 //SHOW, SHOW ONE
 router.get('/:id', (req, res) => {
   Venues.findById(req.params.id)
-    .then((Venues) => {
-      res.render('venues/show', { Venues })
+    .then((venue) => {
+      res.render('venues/show', { venue })
     })
 })
 
@@ -28,8 +28,8 @@ router.get('/:id', (req, res) => {
 //EDIT, RENDER EDIT FORM
 router.get('/:id/edit', (req, res) => {
   Venues.findById(req.params.id)
-    .then((Venues) => {
-      res.render('venues/edit', { Venues })
+    .then((venue) => {
+      res.render('venues/edit', { venue })
     })
 })
 
@@ -37,16 +37,16 @@ router.get('/:id/edit', (req, res) => {
 //CREATE
 router.post('/', (req, res) => {
   Venues.create(req.body)
-    .then((Venues) => {
-      res.redirect(`venues/${Venues._id}`)
+    .then((venue) => {
+      res.redirect(`/venues/${venue._id}`)
     })
 })
 
 //UPDATE
 router.put('/id', (req, res) => {
   Venues.findByIdAndUpdate(req.params.id, req.body)
-    .then((Venues) => {
-      res.redirect(`venues/${Venues._id}`)
+    .then((venue) => {
+      res.redirect(`/venues/${venue._id}`)
     })
 })
 
@@ -55,7 +55,7 @@ router.put('/id', (req, res) => {
   router.delete('/:id', (req,res) => {
     Venues.findByIdAndRemove(req.params.id)
       .then(() => {
-        res.redirect('venues')
+        res.redirect('/venues')
       })
   })
 
