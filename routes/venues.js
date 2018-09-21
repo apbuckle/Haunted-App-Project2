@@ -43,7 +43,7 @@ router.post('/', (req, res) => {
 })
 
 //UPDATE
-router.put('/id', (req, res) => {
+router.put('/:id', (req, res) => {
   Venues.findByIdAndUpdate(req.params.id, req.body)
     .then((venue) => {
       res.redirect(`/venues/${venue._id}`)
@@ -60,4 +60,4 @@ router.put('/id', (req, res) => {
   })
 
 
-module.exports = router;
+module.exports = router
