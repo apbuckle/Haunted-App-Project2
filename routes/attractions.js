@@ -39,29 +39,34 @@ router.get('/:id', (req, res) => {
 
 //CREATE
 router.post('/', (req, res) => {
-    const newAttraction = new Attraction(req.body)
+    const newAttraction = new Attractions(req.body)
     Venues.findById(req.params.venueId)
         .then((venue) => {
             venue.attractions.push(newAttraction)
             return venue.save()
         })
     .then((venue) => {
-        res.redirect(`/venues/${req.params.venue._id}/attractions`)
+        res.redirect(`/venues/${req.params.venueId}/attractions`)
+    })
 })
-})
-
 
 
 //UPDATE
+router.put('/:id', (req, res) => {
+    Venues.findByIdAndUpdate(req.params.venueId)
+        .then((venue) => {
+            res.redirect(`/venues/${venue._id}`)
+        })
+})
 
 
 //DELETE
-// router.delete('/:id', (req, res) => {
-//     Venues.findByIdAndRemove(req.params.venuesId)
-//         .then(() => {
-//             res.redirect(`/venues/${req.params.venue._id}/attractions`)
-//         })
-// })
+router.delete('/:id', (req, res) => {
+    Venues.findByIdAndRemove(req.params.venueId)
+        .then(() => {
+            res.redirect(`/venues/${req.params.venue._id}/attractions`)
+        })
+})
 
 
 module.exports = router
