@@ -11,6 +11,7 @@ mongoose.connect(process.env.MONGODB_URI,{ useNewUrlParser: true })
 
 const indexRouter = require('./routes/index')
 const venueRouter = require('./routes/venues')
+const attractionsRouter = require('./routes/attractions')
 
 
 const app = express()
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 app.use('/venues', venueRouter)
+app.use('/venues/:venueId/attractions', attractionsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
