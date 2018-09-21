@@ -17,7 +17,9 @@ router.get('/', (req, res) => {
 
 //NEW, RENDER NEW FORM
 router.get('/new', (req, res) => {
-    res.render('attractions/new')
+    res.render('attractions/new', {
+        venueId: req.params.venueId
+    })
 })
 
 
@@ -43,9 +45,9 @@ router.post('/', (req, res) => {
             venue.attractions.push(newAttraction)
             return venue.save()
         })
-    .then((venue => {
-        res.redirect(`/venues/${req.params.venue._d}/attractions`)
-    }))
+    .then((venue) => {
+        res.redirect(`/venues/${req.params.venue._id}/attractions`)
+})
 })
 
 
@@ -54,6 +56,12 @@ router.post('/', (req, res) => {
 
 
 //DELETE
+// router.delete('/:id', (req, res) => {
+//     Venues.findByIdAndRemove(req.params.venuesId)
+//         .then(() => {
+//             res.redirect(`/venues/${req.params.venue._id}/attractions`)
+//         })
+// })
 
 
 module.exports = router
