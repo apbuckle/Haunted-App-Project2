@@ -1,11 +1,12 @@
-<h1>All Attractions <a href='/attractions/new'>New</a></h1> 
+<h1>All Attractions <a href="/venues/{{venueId}}/attractions/new">New</a></h1> 
 
 <div>
     {{#each attractions}}
-        <div>name: {{this.name}} <a href='/attractions/{{this._id}}'>Go to Attrcation</a> </div>
+        <div>name: {{this.name}} </div>
         <div>description: {{this.description}}</div>
         <div>price: {{this.price}}</div>
         <br>
+        <a href='/venues/{{../venueId}}/attractions/{{this._id}}'>Go to Attraction</a>
     {{/each}}
 
 </div>

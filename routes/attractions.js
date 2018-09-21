@@ -19,7 +19,15 @@ router.get('/', (req, res) => {
 
 
 //SHOW ONE
-
+router.get('/:id', (req, res) => {
+    Venues.findById(req.params.venueId)
+        .then((venues) => {
+            res.render('attractions/show', {
+                venueId: req.params.venueId,
+                attraction: venues.attractions.id(req.params.id)
+            })
+        })
+    })
 
 //EDIT, RENDER EDIT ONE
 
