@@ -16,6 +16,9 @@ router.get('/', (req, res) => {
 })
 
 //NEW, RENDER NEW FORM
+router.get('/new', (req, res) => {
+    res.render('attractions/new')
+})
 
 
 //SHOW ONE
@@ -33,6 +36,18 @@ router.get('/:id', (req, res) => {
 
 
 //CREATE
+router.post('/', (req, res) => {
+    const newAttraction = new Attraction(req.body)
+    Venues.findById(req.params.venueId)
+        .then((venue) => {
+            venue.attractions.push(newAttraction)
+            return venue.save()
+        })
+    .then((venue => {
+        res.redirect(`/venues/${req.params.venue._d}/attractions`)
+    }))
+})
+
 
 
 //UPDATE

@@ -1,13 +1,14 @@
-<h1>Showing One attraction</h1>
+<h1>{{attraction.name}}</h1>
 
 <div>Name: {{attraction.name}}</div>
 <div>Description: {{attraction.description}}</div>
 <div>Price: {{attraction.price}}</div>
 <div>cast:</div>
-
+<br>
+<div><a href='/venues/{{venueId}}/attractions/{{attraction._id}}/edit'>Edit</a></div>
+<br>
+<div> <a href='/venues/{{venueId}}/attractions'>Go Back to Attractions</a></div>
+<br>
 <form action='/venues/{{venueId}}/attractions/{{attraction._id}}?_method=DELETE' method='POST'>
     <input type="submit" value="Delete Attraction">
 </form>
-
-<div> <a href='/venues/{{venueId}}/attractions/{{attraction._id}}/edit'>Edit Attraction</a></div>
-<div> <a href='/venues/{{venueId}}/attractions'>Go Back to Attractions</a></div>

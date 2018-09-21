@@ -2,11 +2,15 @@
 
 <div>
     {{#each attractions}}
+        <br>
         <div>name: {{this.name}} </div>
         <div>description: {{this.description}}</div>
         <div>price: {{this.price}}</div>
         <br>
         <a href='/venues/{{../venueId}}/attractions/{{this._id}}'>Go to Attraction</a>
+        <br>
     {{/each}}
+<br>
+<a href='/venues/{{venueId}}'>Go back</a>
 
 </div>

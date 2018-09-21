@@ -1,14 +1,17 @@
-<h1>Showing One Venue</h1>
+<h1>{{venue.name}}</h1>
 
 <div>Name: {{venue.name}}</div>
 <div>City: {{venue.city}}</div>
 <div>Age: {{venue.age}}</div>
+<br>
+<div> <a href='/venues/{{venue._id}}/attractions'>Go To Attractions</a></div>
+<br>
+<div> <a href='/venues/{{venue._id}}/edit'>edit</a></div>
+<br>
+<div> <a href='/venues'>Go Back to Venues</a></div>
+<br>
 
 
 <form action='/venues/{{venue._id}}?_method=DELETE' method='POST'>
     <input type="submit" value="Delete Venue">
 </form>
-
-<div> <a href='/venues/{{venue._id}}/edit'>edit</a></div>
-<div> <a href='/venues'>Go Back to Venues</a></div>
-
