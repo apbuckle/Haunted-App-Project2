@@ -73,7 +73,15 @@ router.put('/:id', (req, res) => {
 
 
 //DELETE
-
-
+router.delete('/:id', (req, res) => {
+    Venues.findById(req.params.venueId)
+        .then((venue) => {
+            venue.attractions.remove(req.params.id)
+            return venue.save()
+        })
+        .then (() => {
+            res.redirect(`/venues/${req.params.venueId}/attractions`)
+        })
+    })
 
 module.exports = router
