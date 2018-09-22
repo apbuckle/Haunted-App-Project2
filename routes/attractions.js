@@ -62,11 +62,12 @@ router.post('/', (req, res) => {
 
 //UPDATE
 router.put('/:id', (req, res) => {
-    Venues.findByIdAndUpdate(req.params.venueId, req.body)
+    Venues.findById(req.params.venueId)
     .then((venue) => {
+        venue.attractions.id(req.params.id).set(req.body)
         return venue.save()
     })
-      .then((venu) => { 
+      .then(() => { 
         res.redirect(`/venues/${req.params.venueId}/attractions/${req.params.id}`)
     })
 })
