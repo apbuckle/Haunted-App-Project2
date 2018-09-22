@@ -3,12 +3,12 @@
 <div>Name: {{attraction.name}}</div>
 <div>Description: {{attraction.description}}</div>
 <div>Price: {{attraction.price}}</div>
-<div>cast:</div>
+<div></div>
 <br>
 <div><a href='/venues/{{venueId}}/attractions/{{attraction._id}}/edit'>Edit</a></div>
 <br>
 <div> <a href='/venues/{{venueId}}/attractions'>Go Back to Attractions</a></div>
 <br>
-<form action='/venues/{{venueId}}/attractions/{{attractionId}}?_method=DELETE' method='POST'>
+<form action='/venues/{{venueId}}/attractions/{{attraction._id}}?_method=DELETE' method='POST'>
     <input type="submit" value="Delete Attraction">
 </form>

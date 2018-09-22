@@ -63,33 +63,17 @@ router.post('/', (req, res) => {
 //UPDATE
 router.put('/:id', (req, res) => {
     Venues.findByIdAndUpdate(req.params.venueId, req.body)
-        .then((venue) => {
-            res.redirect(`/venues/${venue._id}`)
-        })
+    .then((venue) => {
+        return venue.save()
+    })
+      .then((venu) => { 
+        res.redirect(`/venues/${req.params.venueId}/attractions/${req.params.id}`)
+    })
 })
 
 
 //DELETE
-router.delete('/:id', (req, res) => {
-    const venueId = req.params.venueId
-    const attractionId = req.params.attractionId
-    Venues.findById(venueId)
-        .then((venue) => {
-            venue.attraction.remove(attractionId)
-            return venue.save()
-        })
-        .then((venue) => {
-            res.render('attractions/index', {
-                venueId: venue._id,
-                attractions: venues.attractions
-            })
 
-        })
-        .catch((error) => {
-            // console.log(`Failed to delete attraction with ID of ${venue._id}`)
-            console.log(error)
-        })
-    })
 
 
 module.exports = router
