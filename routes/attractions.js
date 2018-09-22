@@ -35,6 +35,15 @@ router.get('/:id', (req, res) => {
     })
 
 //EDIT, RENDER EDIT ONE
+router.get('/:id/edit', (req, res) => {
+    Venues.findById(req.params.venueId)
+        .then((venues) => {
+            res.render('attractions/edit', {
+                venueId: req.params.venueId,
+                attraction: venues.attractions.id(req.params.id)
+            })
+        })
+})
 
 
 //CREATE
@@ -53,7 +62,7 @@ router.post('/', (req, res) => {
 
 //UPDATE
 router.put('/:id', (req, res) => {
-    Venues.findByIdAndUpdate(req.params.venueId)
+    Venues.findByIdAndUpdate(req.params.venueId, req.body)
         .then((venue) => {
             res.redirect(`/venues/${venue._id}`)
         })
@@ -62,11 +71,25 @@ router.put('/:id', (req, res) => {
 
 //DELETE
 router.delete('/:id', (req, res) => {
-    Venues.findByIdAndRemove(req.params.venueId)
-        .then(() => {
-            res.redirect(`/venues/${req.params.venue._id}/attractions`)
+    const venueId = req.params.venueId
+    const attractionId = req.params.attractionId
+    Venues.findById(venueId)
+        .then((venue) => {
+            venue.attraction.remove(attractionId)
+            return venue.save()
         })
-})
+        .then((venue) => {
+            res.render('attractions/index', {
+                venueId: venue._id,
+                attractions: venues.attractions
+            })
+
+        })
+        .catch((error) => {
+            // console.log(`Failed to delete attraction with ID of ${venue._id}`)
+            console.log(error)
+        })
+    })
 
 
 module.exports = router
