@@ -1,11 +1,13 @@
-<h1>New Attraction</h1>
+<h1>Create New Attraction</h1>
 
 <form action='/venues/{{venueId}}/attractions' method="POST">
   <input type="text" name="name" placeholder="Name"><br>
   <input type="text" name="description" placeholder="Description"><br>
   <input type="number" name="price" placeholder="Price"><br>
-  <input type="submit" value="Create New Attraction">
   <br>
-  <div> <a href='/venues/{{venueId}}/attractions'>Go Back to Attractions</a></div>
+  <input type="submit" value="CREATE Attraction">
+  <br>
+  <br>
+  <div> <a href='/venues/{{venueId}}/attractions'>Return to Attractions</a></div>
 
 </form>

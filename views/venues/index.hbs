@@ -1,12 +1,14 @@
-<h1>All Venues <a href='/venues/new'>New</a></h1> 
+<h1>All Venues || <a href='/venues/new'>New</a></h1> 
 
 <div>
     {{#each Venues}}
-        <div>name: {{this.name}} <a href='/venues/{{this._id}}'>Go to Venue</a>  </div>
-        <div>city: {{this.city}} </div>
+        <div><a href='/venues/{{this._id}}'>{{this.name}}</a>  </div>
+        {{!-- <div>city: {{this.city}} </div>
         <div>age: {{this.age}}</div>
-        <div></div>
+        <div></div> --}}
         <br>
     {{/each}}
 
 </div>
+
+

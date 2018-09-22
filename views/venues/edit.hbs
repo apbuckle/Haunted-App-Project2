@@ -1,11 +1,11 @@
-<h1>Edit Venue</h1>
+<h1>Edit Venue Page</h1>
 
 <form action='/venues/{{venue._id}}?_method=PUT' method='POST'>
     <div><input type='text' name='name' value='{{venue.name}}'></div>
     <div><input type='text' name='city' value='{{venue.city}}'></div>
     <div><input type='text' name='age' value='{{venue.age}}'></div>
     <br>
-    <div> <input type='submit' value='Update Venue'></div>
+    <div> <input type='submit' value='UPDATE'></div>
     <br>
-    <div> <a href='/venues/{{venue._id}}'>Go Back to Venue</a></div>
+    <div> <a href='/venues/{{venue._id}}'>Return to Venue</a></div>
 </form>
