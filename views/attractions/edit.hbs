@@ -1,4 +1,4 @@
-<h1> Edit {{attraction.name}}</h1>
+<h1> EDIT {{attraction.name}}</h1>
 <form action='/venues/{{venueId}}/attractions/{{attraction._id}}?_method=PUT' method='POST'>
     <div><input type='text' name='name' value='{{attraction.name}}'></div>
     <div><input type='text' name='description' value='{{attraction.description}}'></div>
@@ -7,5 +7,5 @@
     <div> <input type='submit' value='UPDATE'></div>
     <br>
     <br>
-    <div> <a href='/venues/{{venueId}}/attractions'>Go Back to Attrations</a></div>
+    <div> <a href='/venues/{{venueId}}/attractions'>Return to Attrations</a></div>
 </form>

@@ -1,11 +1,11 @@
-<h1>All Attractions || <a href="/venues/{{venueId}}/attractions/new">New</a></h1> 
+<h1>All ATTRCATIONS || <a href="/venues/{{venueId}}/attractions/new">NEW</a></h1> 
 
 <div>
     {{#each attractions}}
         <br>
-        <a href='/venues/{{../venueId}}/attractions/{{this._id}}'>{{this.name}}</a>
-        <div>Description: {{this.description}}</div>
-        <div>Price: ${{this.price}}</div>
+        <div> Enter <a href='/venues/{{../venueId}}/attractions/{{this._id}}'>{{this.name}}</a></div>
+        {{!-- <div>Description: {{this.description}}</div>
+        <div>Price: ${{this.price}}</div> --}}
         <br>
         <br>
     {{/each}}
