@@ -17,10 +17,8 @@ body {
 
 a {
   color: rgba(54, 211, 22, 0.616);
-  /* font-size: 1.5em; */
   text-shadow: 0 0 5px rgba(192, 191, 189, 0.548);
   letter-spacing: 2px;
-  /* transition: all .3s ease-in-out; */
   font-size: 2em;
 }
 
@@ -65,7 +63,25 @@ p {
     -webkit-mask-position: -50%;
   }
 }
+ form {
+  text-align: center;
+ }
 
+ input {
+   width: 60%;
+   height: 25px;
+   margin: 3.5px;
+ }
+
+ .button {
+   width: 30%;
+   height: 30px;
+   color:red;
+ }
+
+ footer {
+   text-align: center;
+ }
 
 /*animation page*/
 .image{
@@ -524,9 +540,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66f2b009', e
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 1000px) {
   body {
-    width: 80%;
-}
-}
+    width: 80%;}
+  h1 {
+    font-size: 15vw;
+    font-size: 10vh;
+  }
+  h2, a{
+    font-size: 8vw; 
+    font-size: 4vh;
+  }
+  p, footer{
+    font-size: 6vw;
+    font-size: 3vh;
+  } 
+
 
