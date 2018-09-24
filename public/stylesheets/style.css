@@ -7,3 +7,9 @@ body {
 a {
   color: rgba(8, 102, 224, 0.829);
 }
+
+@media (max-width: 450px) {
+  body {
+    width: 80%;
+}
+}
