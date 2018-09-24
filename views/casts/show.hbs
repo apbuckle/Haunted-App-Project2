@@ -1,13 +1,12 @@
-<h2>{{cast.name}} || <a href='/venues/{{venueId}}/attractions/{{attraction._id}}/edit'>EDIT</a> </h2>
+<h2>{{cast.name}} || <a href='/venues/{{venueId}}/attractions/{{attraction._id}}/edit'class="effect">EDIT</a> </h2>
 
-{{!-- <div>Name: {{attraction.name}}</div> --}}
 <div>Description: {{attraction.description}}</div>
 <br>
 <div>Price: ${{attraction.price}}</div>
 <br>
-<div><a href='/venues/{{venueId}}/attractions/{{attraction._id}}/casts'>Cast</a></div>
+<div><a href='/venues/{{venueId}}/attractions/{{attraction._id}}/casts'class="effect">Cast</a></div>
 <br>
-<div> <a href='/venues/{{venueId}}/attractions'>Return to Attractions</a></div>
+<div> <a href='/venues/{{venueId}}/attractions'class="effect">Return to Attractions</a></div>
 <br>
 <br>
 <form action='/venues/{{venueId}}/attractions/{{attraction._id}}?_method=DELETE' method='POST'>

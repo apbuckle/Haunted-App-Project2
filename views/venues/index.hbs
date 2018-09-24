@@ -1,13 +1,17 @@
 <h1>Welcome to Haunt</h1>
-<h2>All Venues || <a href='/venues/new'>New</a></h2>
+<h2>All Venues</h2>
+<br>
+
 
 <div>
     {{#each Venues}}
-        <div>Enter <a href='/venues/{{this._id}}'>{{this.name}}</a>  </div>
+        <div> Enter <a href='/venues/{{this._id}}' class="effect">{{this.name}}</a>  </div>
         <br>
     {{/each}}
 
-    <div> <a href='/venues/animation'>Fun</a></div>
+    <div><a href='/venues/new'class="effect">New</a></div>
+    <br>
+    <div> <a href='/venues/animation'class="effect">Fun</a></div>
 
 </div>
 
