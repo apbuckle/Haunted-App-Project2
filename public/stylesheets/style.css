@@ -1,10 +1,7 @@
 body {
-  background-color: rgb(32, 30, 22);
+  background-color: rgb(19, 17, 12);
   padding: 50px;
-  font-family: 'Denk One', sans-serif;
-  font: 20px;
-
-
+  font-family: 'Creepster', cursive;
 }
 
 a {
@@ -12,18 +9,17 @@ a {
 }
 
 
-h1 {
-  color: transparent;
+h1, h2 {
   color: rgba(255, 0, 0, 1);
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  text-shadow: 0 0 8px rgba(238, 239, 240, 0.63);
   font-family: 'Denk One', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 2em; 
+  letter-spacing: 5px;
+  font-size: 3em; 
   position: center;
 }
 
-
+/*animation page*/
 .image{
   position: absolute;
   left: 50%;
