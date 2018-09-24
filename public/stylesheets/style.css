@@ -1,23 +1,38 @@
 body {
-  background-color: rgb(19, 17, 12);
+  background-color: rgba(15, 6, 24, 0.959);
   padding: 50px;
-  font-family: 'Creepster', cursive;
+  font-family: 'Denk One', cursive;
+  font-size: 18px;
+  text-shadow: 0 0 5px rgba(192, 191, 189, 0.671);
+
+ 
 }
 
 a {
-  color: rgba(8, 102, 224, 0.829);
+  color: rgba(54, 211, 22, 0.616);
+  /* font-size: 1.5em; */
+  text-shadow: 0 0 5px rgba(192, 191, 189, 0.548);
+  letter-spacing: 2px;
 }
 
 
-h1, h2 {
+h1 {
   color: rgba(255, 0, 0, 1);
-  text-shadow: 0 0 8px rgba(238, 239, 240, 0.63);
+  text-shadow: 0 0 15px rgba(240, 240, 238, 0.63);
   font-family: 'Denk One', sans-serif;
   text-transform: uppercase;
   letter-spacing: 5px;
-  font-size: 3em; 
-  position: center;
+  font-size: 5em; 
 }
+
+h2 {
+  color: rgba(255, 0, 0, 1);
+  text-shadow: 0 0 8px rgba(240, 240, 238, 0.63);
+  font-family: 'Denk One', sans-serif;
+  letter-spacing: 5px;
+  font-size: 3em; 
+}
+
 
 /*animation page*/
 .image{
