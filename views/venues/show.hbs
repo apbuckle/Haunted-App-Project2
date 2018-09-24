@@ -1,14 +1,15 @@
-<h2>{{venue.name}} || <a href='/venues/{{venue._id}}/edit'class="effect">EDIT</a> </h2>
-
-<div>Location: {{venue.city}}</div>
-<div>Recommended Age: {{venue.age}}</div>
+<h1>{{venue.name}}</h1> 
+<br>
+<p>
+Location: {{venue.city}} <br>
+Recommended Age: {{venue.age}} <br>
+</p>
 <br>
 <div>List of <a href='/venues/{{venue._id}}/attractions'class="effect">Attractions</a></div>
 <br>
+<div> <a href='/venues/{{venue._id}}/edit'class="effect">Edit {{venue.name}}</a></div>
 <br>
 <div><a href='/venues'class="effect">Return to Venues</a></div>
-<br>
-
 <br>
 
 <form action='/venues/{{venue._id}}?_method=DELETE' method='POST'>

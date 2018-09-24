@@ -1,10 +1,13 @@
-<h2>{{attraction.name}} || <a href='/venues/{{venueId}}/attractions/{{attraction._id}}/edit'class="effect">EDIT</a> </h2>
+<h1>{{attraction.name}}</h1>
 
-<div>Description: {{attraction.description}}</div>
-<br>
-<div>Price: ${{attraction.price}}</div>
+<p>
+Description: {{attraction.description}}<br>
+Price: ${{attraction.price}}<br>
+</p>
 <br>
 <div><a href='/venues/{{venueId}}/attractions/{{attraction._id}}/casts'class="effect">Cast</a></div>
+<br>
+<div><a href='/venues/{{venueId}}/attractions/{{attraction._id}}/edit'class="effect">Edit</a></div>
 <br>
 <div> <a href='/venues/{{venueId}}/attractions'class="effect">Return to Attractions</a></div>
 <br>

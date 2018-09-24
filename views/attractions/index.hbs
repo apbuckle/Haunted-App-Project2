@@ -1,4 +1,4 @@
-<h2>Attractions at {{venue.name}} || <a href="/venues/{{venue._id}}/attractions/new"class="effect">NEW</a></h2> 
+<h1>Attractions at {{venue.name}}</h1>
 
 <div>
     {{#each venue.attractions}}
@@ -8,6 +8,8 @@
         <br>
     {{/each}}
 <br>
-<a href='/venues/{{venue._id}}'class="effect">Return to Venue Page</a>
+<div> <a href="/venues/{{venue._id}}/attractions/new"class="effect">New</a> </div>
+<br>
+<div> <a href='/venues/{{venue._id}}'class="effect">Return to Venue Page</a> </div>
 
 </div>
