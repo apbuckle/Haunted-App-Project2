@@ -7,7 +7,6 @@ const { Venues, Attractions} = require('../db/schema')
 router.get('/', (req, res) => {
     Venues.findById(req.params.venueId)
         .then((venue) => {
-            console.log("found attractions", venue)
             res.render('attractions/index', {
                 venue: venue
             })
