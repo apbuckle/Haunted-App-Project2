@@ -6,7 +6,7 @@ const { Venues, Attractions, Cast } = Schema
 
 const Freddy = new Cast({ name: 'Fred', favoriteHorrorMovie: 'Nightmare on Elm Street', yearsScaring: 3, costume: 'Fred Krueger' })
 const Jason = new Cast({name: 'Jason', favoriteHorrorMovie: 'Friday the 13th', yearsScaring: 8, costume: 'Jason Voorhees' })
-const MadMax = new Cast({name: 'Max', favoriteHorrorMovie: 'Duel', yearsScaring: 8, costume: 'pycho driver'})
+const MadMax = new Cast({name: 'Max', favoriteHorrorMovie: 'Duel', yearsOfScarying: 8, costume: 'pycho driver'})
 
 const SlasherHouse = new Attractions({name: 'Slasher House', description: 'Can you survive the classic slashers?', price: 10, cast:[Jason, Freddy] })
 const TerrorRoad = new Attractions({name: 'Terror Road', description: 'Do you dare cross this road?', price: 14, cast: [MadMax]})
