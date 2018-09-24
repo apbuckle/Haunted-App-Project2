@@ -1,15 +1,33 @@
 body {
-  background-color: goldenrod;
+  background-color: rgb(32, 30, 22);
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Denk One', sans-serif;
+  font: 20px;
+
 }
 
 a {
   color: rgba(8, 102, 224, 0.829);
 }
 
+
+h2 {
+  color: transparent;
+  color: rgba(255, 0, 0, 1);
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  font-family: 'Denk One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2em; 
+  position: center;
+}
+
+
+
+
 @media (max-width: 450px) {
   body {
     width: 80%;
 }
 }
+
