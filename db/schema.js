@@ -4,9 +4,8 @@ const Schema = mongoose.Schema
 const CastSchema = new Schema({
     name: String,
     favoriteHorrorMovie: String,
-    years: Number,
+    yearsScaring: Number,
     costume: String,
-    photoUrl: String
 
 })
 
