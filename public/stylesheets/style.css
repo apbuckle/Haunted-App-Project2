@@ -9,7 +9,7 @@ html {
 body {  
   padding: 40px;
   font-family: 'Denk One', cursive;
-  font-size: 18px;
+  /* font-size: 20px; */
   text-shadow: 0 0 5px rgba(192, 191, 189, 0.671);
  
 }
@@ -19,7 +19,7 @@ a {
   color: rgba(54, 211, 22, 0.616);
   text-shadow: 0 0 5px rgba(192, 191, 189, 0.548);
   letter-spacing: 2px;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 
@@ -30,7 +30,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 5em; 
-  margin: 30px;
+  margin: 20px;
   padding: 0 20px;
   text-align: center;
 }
@@ -68,15 +68,23 @@ p {
  }
 
  input {
-   width: 60%;
-   height: 25px;
-   margin: 3.5px;
+   width: 50%;
+   height: 35px;
+   margin: 5px;
+   font-size: 15px;
+   padding: 5px;
  }
 
  .button {
    width: 30%;
-   height: 30px;
+   height: 35px;
    color:red;
+ }
+
+ .delete {
+   background: red;
+   color: white;
+   width: 20%;
  }
 
  footer {
@@ -552,7 +560,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66f2b009', e
     font-size: 4vh;
   }
   p, footer{
-    font-size: 6vw;
+    font-size: 4vw;
     font-size: 3vh;
   } 
 
