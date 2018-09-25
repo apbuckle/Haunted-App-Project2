@@ -1,49 +1,52 @@
 html {
   min-width: 100%;
   min-height: 100%;
-  background-color: black;
+  /* background-color: black; */
 }
 
 body {  
   padding: 40px;
   font-family: 'Denk One', cursive;
-  color: lightslategray; 
+  color: rgb(104, 120, 136); 
+  background-image: url("/public/images/Mike_Myers.png");
+
 }
 
 h1 {
   color: rgba(255, 0, 0, 1);
-  text-shadow: 0 0 100px rgb(164, 86, 236);
+  text-shadow: 1px 1px 0 rgb(158, 33, 196), 1px 1px 85px rgb(164, 86, 236);
   font-family: 'Creepster', sans-serif;
   text-transform: uppercase;
   letter-spacing: 7px;
-  font-size: 5.2em; 
+  font-size: 5.5em; 
   margin: 20px;
   padding: 0 20px;
   text-align: center;
 }
 
-h1, h2 {
-  animation: glow 2s linear infinite alternate-reverse; 
-}
-
-@keyframes glow {
-  to {
-      text-shadow: 0 0 200px rgba(158, 61, 255, 0.952);
-  }
-}
-
 h2 {
   color: rgba(255, 0, 0, 1);
-  text-shadow: 0 0 40px rgb(166, 87, 240);
+  text-shadow:  1px 1px 0px rgb(158, 33, 196), 0 0 35px rgb(166, 87, 240);
   font-family: 'Denk One', sans-serif;
   letter-spacing: 4px;
   font-size: 4em; 
   text-align: center;
 }
 
+h1, h2 {
+  animation: glow 1.5s ease-in-out infinite alternate-reverse; 
+}
+
+@keyframes glow {
+  to {
+      text-shadow: 0 0 150px rgba(158, 61, 255, 0.952);
+  }
+}
+
+
 a {
   color: rgba(33, 214, 26, 0.801);
-  text-shadow: 0 0 45px rgba(69, 92, 196, 0.89);
+  text-shadow: .5px .5px 0 rgb(69, 92, 196), 0 0 55px rgb(42, 75, 224);
   letter-spacing: 3px;
   font-size: 2.25em;
   
@@ -51,8 +54,8 @@ a {
 
 p {
   font-size: 35px;
-  color: rgba(207, 145, 29, 0.849);
-  text-shadow: 0 0 100px rgb(206, 150, 87);
+  color: rgba(218, 158, 27, 0.973);
+  text-shadow: 1px 1px 0 rgb(218, 119, 27), 0 0 100px rgb(206, 150, 87);
   letter-spacing: 2px;
   text-align: center;
 }
@@ -61,7 +64,7 @@ p {
 .effect:hover {
   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 20%, #000 50%, rgba(0,0,0,.6) 80%);
   -webkit-mask-size: 200%;
-  animation: shine 1s infinite;
+  animation: shine 750ms infinite alternate-reverse;
 }
 
 @-webkit-keyframes shine {
@@ -93,7 +96,7 @@ p {
 
 
  .delete {
-   background: red;
+   background: rgba(255, 0, 0, 0.705);
    color: rgb(0, 0, 0);
    width: 10%;
    text-align: right;
@@ -102,7 +105,7 @@ p {
 
  footer {
    text-align: center;
-   letter-spacing: 1.5px;
-   font-size: 22px;
-   text-shadow: 0 0 1px rgba(0, 0, 0, 0.849);
+   letter-spacing: 1.75px;
+   font-size: 24px;
+   text-shadow: .5px 0 0px rgb(247, 100, 100);
  }
