@@ -15,7 +15,7 @@ body {
 
 h1 {
   color: rgba(255, 0, 0, 1);
-  text-shadow: 0 0 125px rgb(202, 145, 255);
+  text-shadow: 0 0 100px rgb(202, 145, 255);
   font-family: 'Creepster', sans-serif;
   text-transform: uppercase;
   letter-spacing: 7px;
@@ -25,9 +25,19 @@ h1 {
   text-align: center;
 }
 
+h1, h2 {
+  animation: glow 2s linear infinite alternate-reverse; 
+}
+
+@keyframes glow {
+  to {
+      text-shadow: 0 0 200px rgba(209, 163, 252, 0.952);
+  }
+}
+
 h2 {
   color: rgba(255, 0, 0, 1);
-  text-shadow: 0 0 100px rgba(202, 145, 255, 0.986);
+  text-shadow: 0 0 50px rgb(202, 145, 255);
   font-family: 'Denk One', sans-serif;
   letter-spacing: 4px;
   font-size: 4em; 
@@ -66,6 +76,7 @@ p {
     -webkit-mask-position: -50%;
   }
 }
+
  form {
   text-align: center;
  }
