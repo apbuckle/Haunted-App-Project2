@@ -13,7 +13,6 @@ const CastSchema = new Schema ({
 const AttractionSchema = new Schema ({
     name: String,
     description: String,
-    price: Number,
     cast: [CastSchema]
 })
 
@@ -21,6 +20,7 @@ const VenueSchema = new Schema ({
     name: String,
     city: String,
     age: Number,
+    price: Number,
     attractions: [AttractionSchema],
 })
 
