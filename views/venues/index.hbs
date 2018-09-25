@@ -1,22 +1,20 @@
-{{!-- <style>
-    body { 
-        background-image: url("/public/images/Mike_Myers.png")
-    }
-</style> --}}
-<div class='box'>
-    <h1>Welcome to Haunt</h1>
-</div>
+<body Id="Myers">
 
-<h2>All Venues</h2>
-<br>
+    <div class='box'>
+        <h1>Welcome to Haunt</h1>
+    </div>
 
-
-<div>
-    {{#each Venues}}
-    <div> Enter <a href='/venues/{{this._id}}' class="effect">{{this.name}}</a> </div>
+    <h2>All Venues</h2>
     <br>
-    {{/each}}
 
-    <div><a href='/venues/new' class="effect" class="new">New</a></div>
-    <br>
-</div>
+
+    <div>
+        {{#each Venues}}
+        <div> Enter <a href='/venues/{{this._id}}' class="effect">{{this.name}}</a> </div>
+        <br>
+        {{/each}}
+
+        <div><a href='/venues/new' class="effect" class="new">New</a></div>
+        <br>
+    </div>
+</body>
