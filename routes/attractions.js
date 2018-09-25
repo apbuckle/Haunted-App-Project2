@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router({ mergeParams: true })
-const { Venues, Attractions} = require('../db/schema')
+const { Venues, Attractions } = require('../db/schema')
 
 
 //SHOW ALL
@@ -30,7 +30,8 @@ router.get('/:id', (req, res) => {
                 attraction: venues.attractions.id(req.params.id)
             })
         })
-    })
+})
+
 
 //EDIT, RENDER EDIT ONE
 router.get('/:id/edit', (req, res) => {
@@ -52,22 +53,22 @@ router.post('/', (req, res) => {
             venue.attractions.push(newAttraction)
             return venue.save()
         })
-    .then((venue) => {
-        res.redirect(`/venues/${req.params.venueId}/attractions`)
-    })
+        .then((venue) => {
+            res.redirect(`/venues/${req.params.venueId}/attractions`)
+        })
 })
 
 
 //UPDATE
 router.put('/:id', (req, res) => {
     Venues.findById(req.params.venueId)
-    .then((venue) => {
-        venue.attractions.id(req.params.id).set(req.body)
-        return venue.save()
-    })
-      .then(() => { 
-        res.redirect(`/venues/${req.params.venueId}/attractions/${req.params.id}`)
-    })
+        .then((venue) => {
+            venue.attractions.id(req.params.id).set(req.body)
+            return venue.save()
+        })
+        .then(() => {
+            res.redirect(`/venues/${req.params.venueId}/attractions/${req.params.id}`)
+        })
 })
 
 
@@ -78,9 +79,10 @@ router.delete('/:id', (req, res) => {
             venue.attractions.remove(req.params.id)
             return venue.save()
         })
-        .then (() => {
+        .then(() => {
             res.redirect(`/venues/${req.params.venueId}/attractions`)
         })
-    })
+})
+
 
 module.exports = router

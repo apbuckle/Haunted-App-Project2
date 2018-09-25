@@ -6,9 +6,9 @@ const { Venues } = require('../db/schema')
 router.get('/', (req, res) => {
   Venues.find()
     .then((Venues) => {
-  console.log('Found Venues', Venues)
-  res.render('venues/index', { Venues })
-  })
+      console.log('Found Venues', Venues)
+      res.render('venues/index', { Venues })
+    })
 })
 
 //NEW, RENDER NEW FORM
@@ -56,12 +56,12 @@ router.put('/:id', (req, res) => {
 
 
 //DELETE
-  router.delete('/:id', (req, res) => {
-    Venues.findByIdAndRemove(req.params.id)
-      .then(() => {
-        res.redirect('/venues')
-      })
-  })
+router.delete('/:id', (req, res) => {
+  Venues.findByIdAndRemove(req.params.id)
+    .then(() => {
+      res.redirect('/venues')
+    })
+})
 
 
 module.exports = router

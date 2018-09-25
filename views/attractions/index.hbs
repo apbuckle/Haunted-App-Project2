@@ -2,14 +2,14 @@
 
 <div>
     {{#each venue.attractions}}
-        <br>
-        <div> Enter <a href='/venues/{{../venue._id}}/attractions/{{this._id}}'class="effect">{{this.name}}</a></div>
-        <br>
-        <br>
+    <br>
+    <div> Enter <a href='/venues/{{../venue._id}}/attractions/{{this._id}}' class="effect">{{this.name}}</a></div>
+    <br>
+    <br>
     {{/each}}
-<br>
-<div> <a href="/venues/{{venue._id}}/attractions/new"class="effect" class='new'>New</a> </div>
-<br>
-<div> <a href='/venues/{{venue._id}}'class="effect">Return to Venue Page</a> </div>
+    <br>
+    <div> <a href="/venues/{{venue._id}}/attractions/new" class="effect" class='new'>New</a> </div>
+    <br>
+    <div> <a href='/venues/{{venue._id}}' class="effect">Return to Venue Page</a> </div>
 
 </div>

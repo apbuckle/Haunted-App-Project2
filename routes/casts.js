@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
                 venueId: req.params.venueId
             })
         })
-    })
+})
 
 //NEW, RENDER NEW FORM
 router.get('/new', (req, res) => {
@@ -21,7 +21,7 @@ router.get('/new', (req, res) => {
         venueId: req.params.venueId,
         attractionId: req.params.attractionId
     })
-})     
+})
 
 //SHOW ONE
 router.get('/:id', (req, res) => {
@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
                 castId: req.params.castId
             })
         })
-    })
+})
 
 //EDIT, RENDER EDIT ONE
 router.get('/:id/edit', (req, res) => {
@@ -54,22 +54,22 @@ router.post('/', (req, res) => {
             venue.attraction.casts.push(newCast)
             return venue.save()
         })
-    .then((venue) => {
-        res.redirect(`/venues/${req.params.venueId}/attractions/${req.params.attractionId}/casts`)
-    })
+        .then((venue) => {
+            res.redirect(`/venues/${req.params.venueId}/attractions/${req.params.attractionId}/casts`)
+        })
 })
 
 
 //Update
 router.put('/:id', (req, res) => {
     Venues.findById(req.params.venueId)
-    .then((venue) => {
-        venue.attractions.id(req.params.id).set(req.body)
-        return venue.save()
-    })
-      .then(() => { 
-        res.redirect(`/venues/${req.params.venueId}/attractions/${req.params.id}/casts/${req.params.id}`)
-    })
+        .then((venue) => {
+            venue.attractions.id(req.params.id).set(req.body)
+            return venue.save()
+        })
+        .then(() => {
+            res.redirect(`/venues/${req.params.venueId}/attractions/${req.params.id}/casts/${req.params.id}`)
+        })
 })
 
 
@@ -80,10 +80,10 @@ router.delete('/:id', (req, res) => {
             venue.attractions.remove(req.params.id)
             return venue.save()
         })
-        .then (() => {
+        .then(() => {
             res.redirect(`/venues/${req.params.venueId}/attractions`)
         })
-    })
+})
 
 
 

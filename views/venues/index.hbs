@@ -1,5 +1,5 @@
 <div class='box'>
-<h1>Welcome to Haunt</h1>
+    <h1>Welcome to Haunt</h1>
 </div>
 
 <h2>All Venues</h2>
@@ -8,14 +8,10 @@
 
 <div>
     {{#each Venues}}
-        <div> Enter <a href='/venues/{{this._id}}' class="effect">{{this.name}}</a>  </div>
-        <br>
+    <div> Enter <a href='/venues/{{this._id}}' class="effect">{{this.name}}</a> </div>
+    <br>
     {{/each}}
 
-    <div><a href='/venues/new'class="effect" class="new">New</a></div>
+    <div><a href='/venues/new' class="effect" class="new">New</a></div>
     <br>
-    <div> <a href='/venues/animation'class="effect">Fun</a></div>
-
 </div>
-
-

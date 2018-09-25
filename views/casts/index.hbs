@@ -1,19 +1,19 @@
 <h2>Cast of {{attraction.name}}</h2>
-    <br>
+<br>
 <div>
     {{#each attraction.cast}}
-        <br>
-        <p>
+    <br>
+    <p>
         {{this.name}}<br>
         Favorite Horror Movie: {{this.favoriteHorrorMovie}}<br>
         Years Of Scarying: {{this.years}}<br>
         Costume: {{this.costume}}<br>
         <br>
-        </p>
+    </p>
     {{/each}}
-<br>
-<div> <a href="/venues/{{venueId}}/attractions/{{attraction._id}}/casts/new" class='effect'>New</a> </div>
-<br>
-<div> <a href='/venues/{{venueId}}/attractions/{{attraction._id}}'class="effect">Return to Attraction</a> </div>
+    <br>
+    <div> <a href="/venues/{{venueId}}/attractions/{{attraction._id}}/casts/new" class='effect'>New</a> </div>
+    <br>
+    <div> <a href='/venues/{{venueId}}/attractions/{{attraction._id}}' class="effect">Return to Attraction</a> </div>
 
 </div>

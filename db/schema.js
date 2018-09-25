@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const CastSchema = new Schema ({
+const CastSchema = new Schema({
     name: String,
     favoriteHorrorMovie: String,
     years: Number,
@@ -10,13 +10,13 @@ const CastSchema = new Schema ({
 
 })
 
-const AttractionSchema = new Schema ({
+const AttractionSchema = new Schema({
     name: String,
     description: String,
     cast: [CastSchema]
 })
 
-const VenueSchema = new Schema ({
+const VenueSchema = new Schema({
     name: String,
     city: String,
     age: Number,
