@@ -15,7 +15,7 @@ body {
 
 h1 {
   color: rgba(255, 0, 0, 1);
-  text-shadow: 0 0 100px rgb(202, 145, 255);
+  text-shadow: 0 0 100px rgb(164, 86, 236);
   font-family: 'Creepster', sans-serif;
   text-transform: uppercase;
   letter-spacing: 7px;
@@ -31,13 +31,13 @@ h1, h2 {
 
 @keyframes glow {
   to {
-      text-shadow: 0 0 200px rgba(209, 163, 252, 0.952);
+      text-shadow: 0 0 200px rgba(158, 61, 255, 0.952);
   }
 }
 
 h2 {
   color: rgba(255, 0, 0, 1);
-  text-shadow: 0 0 50px rgb(202, 145, 255);
+  text-shadow: 0 0 40px rgb(166, 87, 240);
   font-family: 'Denk One', sans-serif;
   letter-spacing: 4px;
   font-size: 4em; 
@@ -46,14 +46,14 @@ h2 {
 
 a {
   color: rgba(33, 214, 26, 0.801);
-  text-shadow: 0 0 125px rgb(20, 45, 158);
+  text-shadow: 0 0 45px rgba(69, 92, 196, 0.89);
   letter-spacing: 3px;
   font-size: 2.25em;
   
 }
 
 p {
-  font-size: 30px;
+  font-size: 35px;
   color: rgba(207, 145, 29, 0.849);
   text-shadow: 0 0 100px rgb(206, 150, 87);
   letter-spacing: 2px;
@@ -71,7 +71,6 @@ p {
   from {
     -webkit-mask-position: 150%;
   }
-  
   to {
     -webkit-mask-position: -50%;
   }
@@ -89,9 +88,9 @@ p {
    padding: 5px;
  }
 
- .button {
+ .add {
    width: 30%;
-   height: 35px;
+   height: 40px;
    color:red;
  }
 
