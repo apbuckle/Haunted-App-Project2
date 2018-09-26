@@ -16,10 +16,6 @@ router.get('/new', (req, res) => {
   res.render('venues/new')
 })
 
-router.get('/animation', (req, res) => {
-  res.render('venues/animation')
-})
-
 //SHOW, SHOW ONE
 router.get('/:id', (req, res) => {
   Venues.findById(req.params.id)
